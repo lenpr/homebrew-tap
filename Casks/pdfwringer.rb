@@ -11,6 +11,12 @@ cask "pdfwringer" do
 
   app "PDFwringer.app"
 
+  postflight do
+    system_command "/usr/bin/chflags", args: ["nohidden", "#{appdir}/PDFwringer.app"]
+    system_command "/usr/bin/xattr", args: ["-d", "com.apple.FinderInfo", "#{appdir}/PDFwringer.app"],
+                   print_stderr: false
+  end
+
   zap trash: [
     "~/Library/Caches/com.pdfwringer.app",
     "~/Library/Preferences/com.pdfwringer.app.plist",
