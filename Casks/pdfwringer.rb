@@ -12,9 +12,8 @@ cask "pdfwringer" do
   app "PDFwringer.app"
 
   postflight do
-    system_command "/usr/bin/chflags", args: ["nohidden", "#{appdir}/PDFwringer.app"]
-    system_command "/usr/bin/xattr", args: ["-d", "com.apple.FinderInfo", "#{appdir}/PDFwringer.app"],
-                   print_stderr: false
+    system_command "/usr/bin/chflags", args: ["nohidden", "#{appdir}/PDFwringer.app"],
+                   must_succeed: false
   end
 
   zap trash: [
