@@ -1,6 +1,6 @@
 cask "pdfwringer" do
-  version "0.1.15"
-  sha256 "a407d949a5428a7957e7ae9c3984ef26d629972f5ae104dcbdc130b30dadc347"
+  version "0.1.16"
+  sha256 "69d36d21df47ba7e849692318fc3cfa311cb14f16b9879c87de16d5f2a776dca"
 
   url "https://github.com/lenpr/PDFwringer/releases/download/v#{version}/PDFwringer.dmg"
   name "PDFwringer"
